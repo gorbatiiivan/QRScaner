@@ -1,0 +1,153 @@
+object Form1: TForm1
+  Left = 45
+  Top = 52
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = Single
+  Caption = 'QRScan'
+  ClientHeight = 465
+  ClientWidth = 377
+  Position = Designed
+  Quality = HighQuality
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  Left = 45
+  Top = 52
+  DesignerMasterStyle = 0
+  object ImgCamera: TImageControl
+    Align = Client
+    HitTest = False
+    Size.Width = 377.000000000000000000
+    Size.Height = 256.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 256.000000000000000000
+    Size.Width = 377.000000000000000000
+    Size.Height = 209.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Button1: TButton
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 177.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = #1053#1072#1095#1072#1090#1100' '#1089#1082#1072#1085#1080#1088#1086#1074#1072#1085#1080#1077
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Enabled = False
+      Position.X = 192.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 177.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = #1054#1090#1084#1077#1085#1080#1090#1100' '#1089#1082#1072#1085#1080#1088#1086#1074#1072#1085#1080#1077
+      OnClick = Button2Click
+    end
+    object CheckBox1: TCheckBox
+      Position.X = 8.000000000000000000
+      Position.Y = 40.000000000000000000
+      Size.Width = 177.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = #1057#1082#1086#1087#1080#1088#1086#1074#1072#1090#1100' '#1074' '#1073#1091#1092#1077#1088
+      OnChange = CheckBox1Change
+    end
+    object QRMemo: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      ReadOnly = True
+      Position.X = 8.000000000000000000
+      Position.Y = 72.000000000000000000
+      Size.Width = 361.000000000000000000
+      Size.Height = 129.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Viewport.Width = 357.000000000000000000
+      Viewport.Height = 125.000000000000000000
+    end
+    object CheckBox4: TCheckBox
+      Enabled = False
+      Position.X = 192.000000000000000000
+      Position.Y = 40.000000000000000000
+      Size.Width = 177.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = #1048#1084#1080#1090#1072#1094#1080#1103' '#1085#1072#1078#1072#1090#1080#1103' Ctrl+V'
+    end
+  end
+  object CameraComponent1: TCameraComponent
+    OnSampleBufferReady = CameraComponent1SampleBufferReady
+    Left = 64
+    Top = 64
+  end
+  object lblScanStatus: TLabel
+    Position.Y = 240.000000000000000000
+    Size.Width = 377.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+  end
+  object Panel2: TPanel
+    Size.Width = 378.000000000000000000
+    Size.Height = 465.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+    TabOrder = 7
+    object CheckBox2: TCheckBox
+      Position.X = 16.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 345.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = #1040#1074#1090#1086#1084#1072#1090#1080#1095#1077#1089#1082#1080' '#1079#1072#1087#1091#1089#1082#1072#1090#1100' '#1087#1088#1080' '#1074#1082#1083#1102#1095#1077#1085#1080#1080' '#1082#1086#1084#1087#1100#1102#1090#1077#1088#1072
+      OnChange = CheckBox2Change
+    end
+    object CheckBox3: TCheckBox
+      Position.X = 16.000000000000000000
+      Position.Y = 40.000000000000000000
+      Size.Width = 345.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = #1047#1072#1087#1091#1089#1082#1072#1090#1100' '#1089#1074#1105#1088#1085#1091#1090#1099#1084
+    end
+    object CheckBox5: TCheckBox
+      Position.X = 16.000000000000000000
+      Position.Y = 64.000000000000000000
+      Size.Width = 345.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = #1055#1086#1074#1077#1088#1093' '#1074#1089#1077#1093' '#1086#1082#1086#1085' ('#1090#1086#1083#1100#1082#1086' '#1087#1088#1080' '#1089#1082#1072#1085#1080#1088#1086#1074#1072#1085#1080#1077')'
+    end
+    object SpeedButton1: TSpeedButton
+      Position.X = 288.000000000000000000
+      Position.Y = 432.000000000000000000
+      Text = #1053#1072#1079#1072#1076
+      OnClick = SpeedButton1Click
+    end
+  end
+  object ActionList1: TActionList
+    Left = 96
+    Top = 64
+    object Options: TAction
+      AutoCheck = True
+      Text = 'Options'
+      ShortCut = 16464
+      OnExecute = OptionsExecute
+    end
+  end
+end
